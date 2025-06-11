@@ -1,0 +1,85 @@
+@startuml EcFlow Workflow Generator Use Case
+actor user
+actor code_manager
+actor developer
+participant github_repo
+participant github_repo_unit_testing
+participant github_issue
+participant development_master_engine
+participant development_configuration_management
+participant development_profile_management
+participant development_product
+participant production_master_engine
+participant production_configuration_management
+participant production_cloud_profile_management
+participant production_product
+participant production_production_transfer
+participant aws_cloud_service
+participant aws_cloud_software_package_configuration
+participant aws_cloud_profile_management
+participant aws_cloud_comout
+participant aws_cloud_transfer
+code_manager -> github_repo: code_management
+code_manager -> github_repo: code review
+code_manager -> github_repo: code release
+code_manager -> github_repo_unit_testing: run_unit tests
+code_manager -> github_issue: create issue
+code_manager -> github_issue: release supportable_feature_platform
+developer -> github_repo: request feature
+developer -> github_repo: request bug fix
+developer -> github_repo: request code review
+developer -> github_repo: develop software packages
+developer -> github_repo: develop container for supportable platform
+developer -> github_repo: develop transfer jobs on the cloud
+developer -> github_repo: process product in comout on the cloud
+developer -> development_profile_management: create supportable profile
+developer -> development_profile_management: create supportable platform
+developer -> development_configuration_management: create supportable configuration
+developer -> development_product: partial product for testing
+developer -> production_master_engine: generate product
+developer -> production_master_engine: performance tuning
+developer -> production_cloud_profile_management: porting supportable platform
+developer -> production_cloud_profile_management: porting supportable configuration
+developer -> production_product: generate product
+developer -> production_production_transfer: transfer product to comout
+developer -> production_configuration_management: finalize development
+developer -> aws_cloud_service: create supportable platform
+developer -> aws_cloud_service: create supportable configuration
+developer -> aws_cloud_service: create supportable profile
+developer -> aws_cloud_software_package_configuration: create supportable software package
+developer -> aws_cloud_software_package_configuration: create supportable software package configuration
+developer -> aws_cloud_profile_management: create supportable profile
+developer -> aws_cloud_profile_management: create supportable platform
+developer -> aws_cloud_profile_management: create supportable configuration
+developer -> aws_cloud_comout: create supportable product
+developer -> aws_cloud_transfer: transfer product to comout
+developer -> github_repo_unit_testing: run_unit tests
+user -> github_issue: create issue
+user -> github_issue: request supportable platform for a given model
+user -> github_issue: provide configuration for supportable profile
+user -> development_master_engine: provide configuration inputs
+user -> development_master_engine: provide rocoto workflow XML for supportable profile
+user -> development_master_engine: access the product from comout
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@enduml
