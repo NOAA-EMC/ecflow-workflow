@@ -1,0 +1,34 @@
+Write a python standalone application “ecflow workflow generator” to generate the ecflow workflow. 
+The ecflow workflow generator will prompt for user input on all following:
+Workflow environment variable:
+suite - a name that identify the ecflow suite. Such as “nco_aqm”
+model - the model name that will be assigned as “model” in python variable. Such as “aqm”.
+model_ver - a three digit number lead by character “v”. Such as “v7.0.8”
+packageroot - a name pair variable separated by common that contains:
+Machine_Platform - Select one supercomputer platform wcoss or gaea.
+Software package location for a target system - Linux format naming structure.
+user - a user to be used in ecflow %EMC_USER% variable assignment.
+proj - used as PROJ variable.
+projenvir - user input word such as “DEV”
+machine_site - user input word default as “development”
+envir - user input word default as “dev”
+queue - user input word default as “dev”
+queue_arch - user input word default as “dev_transfer”
+outputdir -  Linux format naming structure.
+keepdata - user input word default as “NO”
+Workflow control variable:
+configure as 6 hour per cycle workflow - user input word default as “yes”
+configure as one definition file - user input word default as “yes”
+ptmp - storage location for COM related area.
+pslot - identifier for each ecflow suite installation.
+PDY - The PDY of the first cycle to be tested.
+cyc - The cyc of the first cycle to be tested.
+
+
+
+The ecflow workflow generator will have the following python modules (interface):
+suite module - create ecflow suite name in the beginning of the ecflow definition file
+
+
+
+PACKAGEHOME = ${PACKAGEROOT}/${model}/${model_ver}
