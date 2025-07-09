@@ -1,0 +1,6 @@
+suite @suite@
+  family primary
+  @primary_family_env_variable_solution@
+  @cycle_family_solution@
+  endfamily # primary
+endfamily # suite

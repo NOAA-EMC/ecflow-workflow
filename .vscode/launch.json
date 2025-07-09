@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "debugpy",
+      "request": "launch",
+      "name": "Debug generate_suite_definition.py",
+      "program": "${workspaceFolder}/sorc/suite_definition_file_generator/suite/generate_suite_definition.py",
+      "args": [
+        "C:/Users/lin.gan/Documents/VirtualStusioCode/Python Projects/ecflow_workflow_generator_fork/parm/profile/wcoss/aqm/v7/production_realtime/wcoss_aqm_cycled_realtime_config.yaml",
+        "C:/Users/lin.gan/Documents/VirtualStusioCode/Python Projects/ecflow_workflow_generator_fork/fix/seed/wcoss/aqm_ecflow_v7_seed/ecf/defs/aqm_cycled_realtime.def",
+        "C:/Users/lin.gan/Documents/VirtualStusioCode/Python Projects/ecflow_workflow_generator_fork/test/aqm_cycled_realtime.def"
+      ]
+    }
+  ]
+}
